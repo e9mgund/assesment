@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <ul>
+        <li>Name of the team: {{object.country}}</li>
+        <li>Number of matches Played: {{object.matches}}</li>
+        <li>Number of matches Won: {{object.won}}</li>
+        <li>Number of matches lost: {{object.lost}}</li>
+    </ul>
+    <a href="{% url 'tournament:teams' %}">Back to list</a>
 </body>
 </html>
