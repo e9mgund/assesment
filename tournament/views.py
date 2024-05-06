@@ -9,12 +9,12 @@ from django.views import generic
 
 
 class ListView(generic.ListView):
-    template_name = "templates/team_list.html"
+    template_name = "tournament/team_list.html"
     context_object_name = "team_list"
 
     def get_queryset(self) -> QuerySet[Any]:
-        result = []
+        return Team.objects.all()
 
-        for i in Team.objects.all():
-            result.append({"team" : i.country,"matches" : i.matches_played(),"won" : i.matches_won(),"lost" : i.matches_lost(),"points" : i.matches_played() - i.matches_lost() })
-        return result
+class DetailView(generic.DetailView):
+    template_name = "tournament/team_view.html"
+    model = "Team"

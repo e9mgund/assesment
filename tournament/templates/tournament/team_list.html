@@ -15,13 +15,14 @@
         <th>Pts</th>
         {% for teaminfo in team_list %}
         <tr>
-            <td><a href="{% url tournament:detail teaminfo.country %}">{{teaminfo['name']}}</a></td>
-            <td>{{teaminfo['matches']}}</td>
-            <td>{{teaminfo['won']}}</td>
-            <td>{{teaminfo['lost']}}</td>
-            <td>{{teaminfo['points']}}</td>
+            <td><a href="">{{teaminfo.country}}</a></td>
+            <td>{{teaminfo.matches}}</td>
+            <td>{{teaminfo.won}}</td>
+            <td>{{teaminfo.lost}}</td>
+            <td>{{teaminfo.won}}</td>
         </tr>
         {% endfor %}
     </table>
+    {% endif %}
 </body>
 </html>
