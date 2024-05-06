@@ -8,13 +8,13 @@ class Team(models.Model):
     lost = models.IntegerField()
 
     def matches_played(self) -> int:
-        pass
+        return self.matches
 
     def matches_won(self) -> int:
-        pass
+        return self.won
 
     def matches_lost(self) -> int:
-        pass
+        return self.lost
 
     def __str__(self):
         return self.country
