@@ -6,21 +6,19 @@ from .sitemaps import StaticViewSitemap
 from .views import HomeView, ApplyView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('tournament/',include("tournament.urls"))
+    path("admin/", admin.site.urls),
+    path("tournament/", include("tournament.urls")),
 ]
 
 # Sitemap
-sitemaps = {
-    'static': StaticViewSitemap
-}
+sitemaps = {"static": StaticViewSitemap}
 
 urlpatterns += [
-    path('sitemap/', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap_xml'),
+    path("sitemap/", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap_xml"),
 ]
 
 urlpatterns += [
-    path('', HomeView.as_view(), name='home'),
-    path('apply/', ApplyView.as_view(), name='apply'),
+    path("", HomeView.as_view(), name="home"),
+    path("apply/", ApplyView.as_view(), name="apply"),
 ]
