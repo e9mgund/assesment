@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    {% url}
+    {% if team_list %}
+    <table>
+        <th>Team</th>
+        <th>M</th>
+        <th>W</th>
+        <th>L</th>
+        <th>Pts</th>
+        {% for teaminfo in team_list %}
+        <tr>
+            <td><a href="{% url tournament:detail teaminfo.country %}">{{teaminfo['name']}}</a></td>
+            <td>{{teaminfo['matches']}}</td>
+            <td>{{teaminfo['won']}}</td>
+            <td>{{teaminfo['lost']}}</td>
+            <td>{{teaminfo['points']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
