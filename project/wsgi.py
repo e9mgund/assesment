@@ -13,9 +13,7 @@ import dotenv
 from django.conf import settings
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'xcv_site.settings')
-dotenv.load_dotenv(
-    os.path.join(settings.BASE_DIR, 'xcv_site/.env')
-)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "xcv_site.settings")
+dotenv.load_dotenv(os.path.join(settings.BASE_DIR, "xcv_site/.env"))
 
 application = get_wsgi_application()

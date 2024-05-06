@@ -5,8 +5,9 @@ from django.shortcuts import reverse
 class StaticViewSitemap(Sitemap):
     def items(self):
         urls = [
-            'home',
-            'sitemap', 'sitemap_xml', 
+            "home",
+            "sitemap",
+            "sitemap_xml",
         ]
 
         return urls
