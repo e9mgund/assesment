@@ -5,5 +5,6 @@ app_name = "tournament"
 
 urlpatterns = [
     path("teams/",views.ListView.as_view(),name="teams"),
-    path("teams/<int:pk>/",views.DetailView.as_view(),name="detail")
+    path("teams/<int:pk>/",views.DetailView.as_view(),name="detail"),
+    path("teams/new/",views.fill,name="new"),
     ]
