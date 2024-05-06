@@ -6,7 +6,8 @@ from .sitemaps import StaticViewSitemap
 from .views import HomeView, ApplyView
 
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('tournament/',include("tournament.urls"))
 ]
 
 # Sitemap
