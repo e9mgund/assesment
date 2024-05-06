@@ -15,7 +15,7 @@
         <th>Pts</th>
         {% for teaminfo in team_list %}
         <tr>
-            <td><a href="">{{teaminfo.country}}</a></td>
+            <td><a href="{% url 'tournament:detail' teaminfo.id %}">{{teaminfo.country}}</a></td>
             <td>{{teaminfo.matches}}</td>
             <td>{{teaminfo.won}}</td>
             <td>{{teaminfo.lost}}</td>

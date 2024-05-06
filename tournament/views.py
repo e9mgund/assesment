@@ -17,4 +17,4 @@ class ListView(generic.ListView):
 
 class DetailView(generic.DetailView):
     template_name = "tournament/team_view.html"
-    model = "Team"
+    model = Team
